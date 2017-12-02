@@ -124,29 +124,29 @@ public class Gui extends JFrame
 						switch (lstMethoden.getSelectedItem())
 						{
 							case "RSI30":
-								txtErgebnis.setText(Double.toString(TA.rsi(30, kurse.length, kurse)));
+								txtErgebnis.setText(Double.toString(TA.rsi((kurse.length-1), 30, kurse)));
 								break;
 							
 							case "RSI60":
-								txtErgebnis.setText(Double.toString(TA.rsi(60, kurse.length, kurse)));
+								txtErgebnis.setText(Double.toString(TA.rsi((kurse.length-1), 60, kurse)));
 								break;
 							
 							case "GD30":
-								txtErgebnis.setText(Double.toString(TA.gd(30, kurse.length, kurse)));
+								txtErgebnis.setText(Double.toString(TA.gd((kurse.length-1), 30, kurse)));
 								break;
 								
 							case "GD90":
-								txtErgebnis.setText(Double.toString(TA.gd(90, kurse.length, kurse)));
+								txtErgebnis.setText(Double.toString(TA.gd((kurse.length-1), 90, kurse)));
 								break;
 		
 							case "RS14":
-								txtErgebnis.setText(Double.toString(TA.rs(14, kurse.length, kurse)));
+								txtErgebnis.setText(Double.toString(TA.rs((kurse.length-1), 14, kurse)));
 								break;
 						}
 					}
-					catch (Exception e1)
+					catch (Exception ex)
 					{
-						System.out.println(e1);
+						System.out.println(ex);
 						
 						/*for (int i = 0; i < kurse.length; i++)
 						**{
